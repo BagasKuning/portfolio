@@ -3,8 +3,8 @@ import me from '../img/me.jpg'
 export default function Hero() {
     return (
         <div className="w-full bg-blue-200">
-            <div className='flex p-5 md:h-[500px] h-[400px] bg-black text-white gap-2 m-2 rounded-3xl'>
-                <div className='hero-left relative bg-sand flex-1 rounded-2xl'>
+            <div className='flex p-5 md:h-[500px] h-[320px] bg-black text-white gap-2 m-2 rounded-3xl'>
+                <div className='hero-left relative flex-1 sm:rounded-2xl sm:after:rounded-2xl rounded-lg after:rounded-lg bg-cover bg-center'>
 
                 </div>
 
@@ -12,10 +12,10 @@ export default function Hero() {
                     <img
                         src={me}
                         alt=""
-                        className='rounded-full w-28 h-28'
+                        className='rounded-full md:w-28 md:h-28 w-16 h-16'
                     />
-                    <h1 className='mt-8 mb-2 md:text-lg sm:text-sm text-xs opacity-70'>DWI BAGASKARA</h1>
-                    <p className='md:text-5xl sm:text-3xl text-xl font-semibold z-10'>Connecting creativity with technology</p>
+                    <h1 className='sm:mt-8 mt-5 mb-2 md:text-lg text-xs opacity-70'>DWI BAGASKARA</h1>
+                    <p className='md:text-5xl sm:text-3xl text-2xl font-semibold z-10 mx-2'>Connecting creativity with technology</p>
 
 
                     <a href='#about' className='z-10 absolute bottom-0 py-10 md:px-12 px-8 sm:translate-y-[120px] translate-y-[108px] bg-black rounded-3xl'>
@@ -23,7 +23,7 @@ export default function Hero() {
                     </a>
                 </div>
 
-                <div className='hero-right relative flex-1 rounded-2xl bg-cover bg-center'>
+                <div className='hero-right relative flex-1 sm:rounded-2xl sm:after:rounded-2xl rounded-lg after:rounded-lg bg-cover bg-center'>
 
                 </div>
             </div>
