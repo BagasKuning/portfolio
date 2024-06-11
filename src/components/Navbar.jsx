@@ -2,7 +2,7 @@ import me from '../img/me.jpg'
 
 export default function Navbar() {
     return (
-        <nav className=' sm:text-base text-xs z-10 lg:w-[65%] md:w-[80%] w-[97%] sm:my-10 my-5 min-w-max flex bg-black text-white items-center justify-around sm:py-5 sm:px-8 py-3 px-5 rounded-full'>
+        <nav className=' sm:text-base text-xs z-10 md:w-[65%] w-[97%] my-10 min-w-max flex bg-black text-white items-center justify-around sm:py-5 sm:px-8 py-4 px-5 rounded-full'>
 
             <span className='relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:bg-sand'>
                 Portfolio

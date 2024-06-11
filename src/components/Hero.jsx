@@ -5,11 +5,11 @@ export default function Hero() {
         <div className="bg-white text-black w-full max-h-[680px] h-screen rounded-[46px] rounded-t-none flex flex-col items-center justify-center">
             <Navbar/>
 
-            <div className='text-center h-full sm:mt-10 mt-5 flex flex-col px-4'>
+            <div className='text-center h-full mb-20 flex flex-col px-4 justify-center'>
                 <h1 className='sm:text-base text-sm'>
                     Hello 👋🏻, I am <span className='text-orange font-medium'>Dwi Bagaskara</span> and I am a
                 </h1>
-                <h2 className='lg:text-7xl md:text-6xl text-5xl font-semibold my-5'>
+                <h2 className='lg:text-7xl text-5xl font-semibold my-5'>
                     Front-End Developer <br/>
                     Based In Indonesia
                 </h2>
