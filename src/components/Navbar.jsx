@@ -7,8 +7,9 @@ export default function Navbar() {
             <span className='relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:bg-sand'>
                 Portfolio
             </span>
-            <a href="github">
-                Github
+
+            <a href="#about">
+                About
             </a>
 
             <div className='w-16' />
@@ -17,10 +18,10 @@ export default function Navbar() {
                 className=' md:w-24 md:h-24 w-16 h-16 rounded-full absolute border-white border-4'
             />
 
-            <a href="project">
-                Linkedin
+            <a href="#project">
+                Project
             </a>
-            <a href="resume">
+            <a href="dwi-bagaskara-resume.pdf">
                 Resume
             </a>
 

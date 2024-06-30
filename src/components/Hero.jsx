@@ -18,10 +18,10 @@ export default function Hero() {
                         Creating a stunning digital world, where every click and swipe becomes a new adventure for users
                     </p>
 
-                    <div className='mb-5 sm:mt-0 mt-3 sm:text-sm text-base'>
+                    <div className='mb-5 sm:mt-0 mt-3 sm:text-base text-sm'>
                         <button className='mt-5 py-2 sm:px-6 px-4 bg-orange text-white rounded-full mr-4'>
-                            <a href="#project">
-                                See my <span className='font-semibold'>Project</span>
+                            <a href="https://wa.me/+6285834244858">
+                                WhatsApp <span className='font-semibold'>Now</span>
                             </a>
                         </button>
 

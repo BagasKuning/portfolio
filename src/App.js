@@ -3,16 +3,19 @@ import Hero from './components/Hero';
 import Motto from './components/Motto';
 import About from './components/About';
 import Project from './components/Project';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App max-w-[1500px] mx-auto">
+    <div>
+      <div className="App max-w-[1500px] mx-auto">
         <Hero/>
         <Motto/>
         <About/>
         <Project/>
+      </div>
 
-        <div className='h-[500px]'/>
+      <Footer/>
     </div>
   );
 }
