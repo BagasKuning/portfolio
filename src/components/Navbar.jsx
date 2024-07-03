@@ -21,7 +21,7 @@ export default function Navbar() {
             <a href="#project">
                 Project
             </a>
-            <a href="dwi-bagaskara-resume.pdf">
+            <a href="Dwi%20Bagaskara%20Resume%20FE.pdf">
                 Resume
             </a>
 
