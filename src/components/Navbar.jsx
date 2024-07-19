@@ -1,4 +1,4 @@
-import me from '../img/me.jpg'
+import me from '../img/me2-edit.jpg'
 
 export default function Navbar() {
     return (
@@ -15,7 +15,7 @@ export default function Navbar() {
             <div className='w-16' />
             <img src={me}
                 alt=""
-                className=' md:w-24 md:h-24 w-16 h-16 rounded-full absolute border-white border-4'
+                className=' md:w-24 md:h-24 w-16 h-16 rounded-full absolute border-black border-4'
             />
 
             <a href="#project">

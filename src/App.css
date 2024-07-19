@@ -1,5 +1,6 @@
-
-
+.bg-about{
+  background-image: url('./img/me-none-bg.png');
+}
 
 .about-text {
   color: transparent;
