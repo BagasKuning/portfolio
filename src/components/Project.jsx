@@ -42,7 +42,7 @@ export default function Project() {
                 {
                     project.map((item, index) => (
                         <a className={`${index % 2 === 1 ? "mt-12" : ""}`} href={item.link}>
-                            <div className='w-full bg-[#f4f5f5] flex flex-col items-center lg:p-20 sm:p-12 p-5'>
+                            <div className='w-full bg-[#f3f7f7] flex flex-col items-center lg:p-20 sm:p-12 p-5'>
                                 <img src={item.img} alt="ccorner" className='w-full h-auto object-cover' />
                             </div>
                             <h2 className='lg:text-3xl text-xl mt-8 mb-2'>{item.title}</h2>
