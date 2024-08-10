@@ -1,3 +1,5 @@
+import React, { useEffect, useRef, useState } from "react";
+
 export default function Skill() {
   const skill = [
     'HTML',
@@ -12,7 +14,49 @@ export default function Skill() {
     "Git",
     "Express",
     "MySql",
-  ]
+  ];
+
+  const [isInView, setIsInView] = useState(false);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    const currentRef = divRef.current
+    const handleScroll = () => {
+      if (currentRef) {
+        const rect = currentRef.getBoundingClientRect();
+        // Update isInView if scroll has passed the element
+        if (window.scrollY > (rect.top + window.scrollY) || rect.top + currentRef.offsetHeight / 1.8 < window.innerHeight) {
+          setIsInView(true);
+        } else {
+          setIsInView(false)
+        }
+      }
+    };
+
+    // const observer = new IntersectionObserver(
+    //   ([entry]) => {
+    //     if (entry.isIntersecting) {
+    //       setIsInView(true);
+    //     }
+    //   },
+    //   { threshold: 0.8 } // Threshold 0.8 means the animation starts when 80% of the component is visible
+    // );
+
+    // if (currentRef) {
+    //   observer.observe(currentRef);
+    // }
+
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // if (currentRef) {
+      //   observer.unobserve(currentRef);
+      // }
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
 
   return (
     <div className='bg-[#0b0e11]'>
@@ -30,12 +74,12 @@ export default function Skill() {
             <div className='flex gap-20'>
               <ul>
                 {skill.slice(0, 6).map(item => (
-                  <li><span className='text-primary'>{'<>'}</span> {item}</li>
+                  <li key={item}><span className='text-primary'>{'<>'}</span> {item}</li>
                 ))}
               </ul>
               <ul>
                 {skill.slice(6).map(item => (
-                  <li><span className='text-primary'>{'<>'}</span> {item}</li>
+                  <li key={item}><span className='text-primary'>{'<>'}</span> {item}</li>
                 ))}
               </ul>
             </div>
@@ -43,11 +87,11 @@ export default function Skill() {
           </div>
 
           <div className='flex-1 relative md:mt-0 mt-14'>
-            <div className='relative md:h-[500px] sm:h-[530px] h-[380px] md:w-10/12 w-full float-right'>
-              <div className='z-10 bg-about absolute h-full w-full bg-cover bg-top rounded-3xl' />
+            <div className='relative md:h-[500px] sm:h-[530px] h-[380px] md:w-10/12 w-full float-right' ref={divRef}>
+              <div className={`z-10 bg-about absolute h-full w-full bg-cover bg-top rounded-3xl transform transition-transform duration-700 ease-in-out 
+                  ${isInView ? 'translate-y-0' : 'translate-y-full'}`} />
               <div className='absolute bottom-0 w-full h-1/2 z-0 bg-secondary rounded-b-3xl'>
-
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className=' -translate-y-[98%]'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className=' -translate-y-[98%]'>
                   <path fill="#C7EEFF" fill-opacity="1" d="M0,192L17.1,186.7C34.3,181,69,171,103,176C137.1,181,171,203,206,202.7C240,203,274,181,309,154.7C342.9,128,377,96,411,122.7C445.7,149,480,235,514,224C548.6,213,583,107,617,101.3C651.4,96,686,192,720,208C754.3,224,789,160,823,144C857.1,128,891,160,926,176C960,192,994,192,1029,208C1062.9,224,1097,256,1131,234.7C1165.7,213,1200,139,1234,128C1268.6,117,1303,171,1337,197.3C1371.4,224,1406,224,1423,224L1440,224L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"></path>
                 </svg>
               </div>
