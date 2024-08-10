@@ -41,7 +41,7 @@ export default function Project() {
                 </p>
                 {
                     project.map((item, index) => (
-                        <a className={`${index % 2 === 1 ? "mt-12" : ""}`} href={item.link}>
+                        <a className={`${index % 2 === 1 ? "mt-12" : ""}`} href={item.link} key={index}>
                             <div className='w-full bg-[#f3f7f7] flex flex-col items-center lg:p-20 sm:p-12 p-5'>
                                 <img src={item.img} alt="ccorner" className='w-full h-auto object-cover' />
                             </div>
