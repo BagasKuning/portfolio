@@ -13,6 +13,10 @@ module.exports = {
         'primary': '#2185D5',
       }
     },
+    fontFamily: {
+      "suse": ["SUSE", "sans-serif"],
+      "rubik": ["Rubik", "sans-serif"]
+    }
   },
   plugins: [],
 }

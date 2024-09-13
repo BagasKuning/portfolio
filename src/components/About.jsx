@@ -59,7 +59,7 @@ export default function Skill() {
 
 
   return (
-    <div className='bg-[#0b0e11]'>
+    <div className='bg-black'>
       <div id='about' className=" bg-white rounded-t-3xl lg:px-16 px-6 py-24">
 
         <div className='flex md:flex-row flex-col'>

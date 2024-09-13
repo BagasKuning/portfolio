@@ -10,8 +10,8 @@ function App() {
     <div>
       <div className="App max-w-[1500px] mx-auto">
         <Hero/>
-        <Motto/>
         <About/>
+        <Motto/>
         <Project/>
       </div>
 

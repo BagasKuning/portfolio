@@ -1,3 +1,7 @@
+.hero-text-stroke{
+      -webkit-text-stroke: 1px white; /* Menambahkan outline putih */
+}
+
 .bg-about{
   background-image: url('./img/me-none-bg.png');
 }
