@@ -32,7 +32,7 @@ export default function Project() {
     ]
 
     return (
-        <div className='lg:px-16 px-5 py-24 z-20 bg-[#ffff] relative' id='project'>
+        <div className='lg:px-16 px-5 py-24 z-20 bg-[#ffff] text-black relative' id='project'>
 
             <div className='grid grid-cols-2 sm:gap-24 gap-6'>
                 <h1 className='text-4xl mb-10'>My Project</h1>

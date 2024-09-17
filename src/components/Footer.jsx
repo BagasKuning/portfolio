@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className='mt-7 max-w-[1500px] w-full mx-auto bg-black text-[#ffffff90] sm:px-7 px-3 py-3 sm:text-base text-xs'>
+        <footer className=' max-w-[2000px] w-full mx-auto bg-black text-[#ffffff90] sm:px-7 px-3 py-3 sm:text-base text-xs'>
 
             <div className=" inline-flex sm:gap-7 gap-3">
                 <a href="https://github.com/BagasKuning">

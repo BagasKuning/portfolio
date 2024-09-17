@@ -1,8 +1,19 @@
-.hero-text-stroke{
-      -webkit-text-stroke: 1px white; /* Menambahkan outline putih */
+/* #hero-section {
+  background: rgb(29,36,43);
+background: linear-gradient(180deg, rgba(29,36,43,1) 62%, rgba(33,133,213,0.6587009803921569) 91%, rgba(199,238,255,0.6474964985994398) 99%);
+} */
+
+.hero-text-stroke {
+  -webkit-text-stroke: 1px white;
+  /* Menambahkan outline putih */
+}
+.hero-img{
+  background: url('./img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-.bg-about{
+.bg-about {
   background-image: url('./img/me-none-bg.png');
 }
 
@@ -15,15 +26,17 @@
 
 /* animate img navbar */
 @keyframes fall {
-  0% {  
-      transform: translateY(-150px);
-      opacity: 0;
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
   }
+
   20% {
-      opacity: 1;
+    opacity: 1;
   }
+
   100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
