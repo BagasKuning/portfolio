@@ -48,6 +48,12 @@ export default function Hero() {
         >
           PORTFOLIOPORTFOLIO
         </span>
+        <span
+          className="absolute hero-text-stroke z-0 max-w-[1600px] select-none opacity-[5%] sm:text-[10vw] text-[10vw] top-[20%] 
+                    text-black overflow-hidden"
+        >
+          PORTFOLIOPORTFOLIO
+        </span>
 
         <div className="mb-1 relative sm:px-12 px-4 flex justify-between items-end max-sm:gap-1">
           <h1 className="z-10 relative text-primary font-medium italic">
