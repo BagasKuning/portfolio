@@ -42,12 +42,12 @@ export default function Hero() {
         ref={container}
         className="fixed top-0 left-1/2 -translate-x-1/2 max-w-[1600px] w-full h-screen flex flex-col justify-center"
       >
-        {/* <span
-          className="hero-text-stroke z-0 select-none opacity-[4%] text-[10rem] absolute 2xl:top-24 top-0 
-                      -translate-x-16 whitespace-nowrap text-black"
+        <span
+          className="absolute hero-text-stroke z-0 max-w-[1600px] select-none opacity-[5%] sm:text-[10vw] text-[10vw] top-[15%] 
+                    text-black overflow-hidden"
         >
-          DWIBAGASKARADWIBAGASKARA
-        </span> */}
+          PORTFOLIOPORTFOLIO
+        </span>
 
         <div className="mb-1 relative sm:px-12 px-4 flex justify-between items-end max-sm:gap-1">
           <h1 className="z-10 relative text-primary font-medium italic">
