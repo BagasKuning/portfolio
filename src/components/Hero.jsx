@@ -21,16 +21,21 @@ export default function Hero() {
       });
 
       tl.to(".hero-img", {
-        height: 0, // Mengubah tinggi ".hero-img" menjadi 0
-        ease: "none", // Tanpa easing untuk efek yang lebih mulus
-      });
+          height: 0, // Mengubah tinggi ".hero-img" menjadi 0
+          ease: "none", // Tanpa easing untuk efek yang lebih mulus
+          duration: 10
+        })
+        .to(".hero-desc", {
+        opacity: 0
+      })
+        
     },
     { scope: container }
   ); // <-- scope is for selector text (optional)
 
   return (
     <div
-      className="relative 2xl:text-8xl md:text-6xl sm:text-5xl text-3xl w-full h-screen bg-black"
+      className="relative md:text-6xl sm:text-5xl text-3xl w-full h-screen bg-black"
     >
       <div 
         id="hero-section" 
@@ -44,11 +49,11 @@ export default function Hero() {
           DWIBAGASKARADWIBAGASKARA
         </span> */}
 
-        <div className="mb-1 relative sm:px-8 px-4 flex justify-between items-end max-sm:gap-4">
+        <div className="mb-1 relative sm:px-12 px-4 flex justify-between items-end max-sm:gap-1">
           <h1 className="z-10 relative text-primary font-medium italic">
             DWI BAGASKARA
           </h1>
-          <p className="sm:w-1/5 w-1/3 2xl:text-base text-xs max-sm:text-[9px]">
+          <p className="hero-desc sm:w-1/5 w-1/3 2xl:text-base text-xs max-sm:text-[9px]">
             Creating a stunning digital world, where every click and swipe
             becomes a new adventure for users
           </p>
@@ -56,8 +61,8 @@ export default function Hero() {
 
         <div className="hero-img z-10  w-full h-1/3 max-h-[280px] bg-white" />
 
-        <span className="sm:px-8 px-4 font-medium italic">
-          FRONTEND ENGINER <br />
+        <span className="sm:px-12 px-4 font-medium italic">
+          PROGRAMMER <br />
           BASED IN INDONESIA
         </span>
       </div>

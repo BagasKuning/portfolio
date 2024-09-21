@@ -1,44 +1,24 @@
-import { useState } from 'react'
-import me from '../img/me2-edit.jpg'
-
 export default function Navbar() {
-    const [anim, setAnim] = useState(false)
+  return (
+    <nav className="relative select-none font-suse max-sm:text-sm z-10 flex bg-black justify-between items-center sm:px-5 px-2 py-2">
+      <div className="italic sm:text-lg text-md">BK_</div>
 
-    const handleImageLoad = () => {
-        setTimeout(() => {
-            setAnim(true)
-        }, 500)
-    }
-
-    return (
-        <nav 
-        onLoad={handleImageLoad}
-        className={`md:text-base text-xs z-10 lg:w-[55%] md:w-[70%] w-[96%] my-10 min-w-max 
-                    flex bg-black text-white items-center justify-around md:py-5 md:px-8 py-4 px-5 rounded-full
-                    ${anim === true ? "animate-fall" : " -translate-y-[150px]"}
-            `}>
-
-            <span className='relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:bg-secondary'>
-                Portfolio
-            </span>
-
-            <a href="#about">
-                About
-            </a>
-
-            <div className='w-16' />
-            <img src={me}
-                alt=""
-                className={`md:w-24 md:h-24 w-16 h-16 rounded-full absolute border-black border-4`}
-            />
-
-            <a href="#project">
-                Project
-            </a>
-            <a href="Dwi%20Bagaskara%20Resume%20FE.pdf">
-                Resume
-            </a>
-
-        </nav>
-    )
+      <div>
+        <span className="sm:inline hidden ">
+          <a href="#about" className=" mx-3 opacity-60">
+            About
+          </a>
+          <a href="#project" className="mx-3 opacity-75">
+            Project
+          </a>
+        </span>
+        <a
+          href="http://localhost:3000/Dwi_Bagaskara-CV.pdf"
+          className="ml-3 opacity-100 bg-gradient-to-tr from-primary to-blue-300 px-3 rounded py-1"
+        >
+          Resume
+        </a>
+      </div>
+    </nav>
+  );
 }
