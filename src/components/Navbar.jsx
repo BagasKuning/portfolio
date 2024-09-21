@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="relative select-none font-suse max-sm:text-sm z-10 flex bg-black justify-between items-center sm:px-5 px-2 py-2">
+    <nav className="absolute select-none font-suse max-w-[1600px] w-full max-sm:text-sm z-10 flex bg-black justify-between items-center sm:px-5 px-2 py-5">
       <div className="italic sm:text-lg text-md">BK_</div>
 
       <div>
