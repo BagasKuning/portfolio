@@ -35,7 +35,7 @@ export default function Hero() {
 
   return (
     <div
-      className="relative md:text-6xl sm:text-5xl text-3xl w-full h-screen bg-black"
+      className="relative font-suse md:text-6xl sm:text-5xl text-3xl w-full h-screen bg-black"
     >
       <div 
         id="hero-section" 
@@ -56,7 +56,7 @@ export default function Hero() {
         </span>
 
         <div className="mb-1 relative sm:px-12 px-4 flex justify-between items-end max-sm:gap-1">
-          <h1 className="z-10 relative text-primary font-medium italic">
+          <h1 className="z-10 relative text-primary font-bold italic">
             DWI BAGASKARA
           </h1>
           <p className="hero-desc sm:w-1/5 w-1/3 2xl:text-base text-xs max-sm:text-[9px]">
@@ -67,7 +67,7 @@ export default function Hero() {
 
         <div className="hero-img z-10  w-full h-1/3 max-h-[280px] bg-white" />
 
-        <span className="sm:px-12 px-4 font-medium italic">
+        <span className="sm:px-12 px-4 font-bold italic">
           PROGRAMMER <br />
           BASED IN INDONESIA
         </span>

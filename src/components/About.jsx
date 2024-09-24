@@ -66,7 +66,7 @@ export default function Skill() {
       >
         <div className="flex md:flex-row flex-col">
           <div className="flex-1 flex flex-col justify-center gap-5">
-            <h1 className="text-4xl mb-5 after:absolute relative after:w-1/2 after:h-2 after:bg-gradient-to-r after:from-secondary after:to-white after:left-0 after:bottom-0 after:translate-y-2">
+            <h1 className="italic text-4xl mb-5 after:absolute relative after:w-1/2 after:h-2 after:bg-gradient-to-r after:from-secondary after:to-white after:left-0 after:bottom-0 after:translate-y-2">
               Get to Know Me Closer
             </h1>
             <p>

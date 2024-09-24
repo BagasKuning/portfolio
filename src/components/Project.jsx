@@ -35,13 +35,13 @@ export default function Project() {
         <div className='lg:px-16 px-5 py-24 z-20 bg-[#ffff] text-black relative' id='project'>
 
             <div className='grid grid-cols-2 sm:gap-24 gap-6'>
-                <h1 className='text-4xl mb-10'>My Project</h1>
-                <p className=' mt-12'>
+                <h1 className=' text-4xl mb-10'>My Project</h1>
+                <p className=' mt-16'>
                     Transforming Innovative Ideas into Engaging and User-Centric Digital Realities with Seamless Functionality and Stunning Visuals
                 </p>
                 {
                     project.map((item, index) => (
-                        <a className={`${index % 2 === 1 ? "mt-12" : ""}`} href={item.link} key={index}>
+                        <a className={`${index % 2 === 1 ? "mt-16" : ""}`} href={item.link} key={index}>
                             <div className='w-full bg-[#f3f7f7] flex flex-col items-center lg:p-20 sm:p-12 p-5'>
                                 <img src={item.img} alt="ccorner" className='w-full h-auto object-cover' />
                             </div>

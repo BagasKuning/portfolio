@@ -12,7 +12,7 @@ export default function Navbar() {
         </a>
         <a
           href="http://localhost:3000/Dwi_Bagaskara-CV.pdf"
-          className="ml-3 opacity-100 bg-gradient-to-tr from-primary to-blue-300 px-3 rounded py-1"
+          className="ml-3 bg-gradient-to-tr from-primary to-blue-300 px-3 rounded py-1"
         >
           Resume
         </a>
