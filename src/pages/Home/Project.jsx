@@ -1,7 +1,7 @@
-import ccorner from '../img/ccorner.png'
-import dashview from '../img/dashview.png'
-import drivedeal from '../img/drivedeal.png'
-import rlestate from '../img/rlestate.png'
+import ccorner from '../../img/ccorner.png'
+import dashview from '../../img/dashview.png'
+import drivedeal from '../../img/drivedeal.png'
+import rlestate from '../../img/rlestate.png'
 
 export default function Project() {
     const project = [
@@ -42,7 +42,7 @@ export default function Project() {
                 {
                     project.map((item, index) => (
                         <a className={`${index % 2 === 1 ? "mt-16" : ""}`} href={item.link} key={index}>
-                            <div className='w-full bg-[#f3f7f7] flex flex-col items-center lg:p-20 sm:p-12 p-5'>
+                            <div className='w-full bg-slate-200 flex flex-col items-center lg:p-20 sm:p-12 p-5'>
                                 <img src={item.img} alt="ccorner" className='w-full h-auto object-cover' />
                             </div>
                             <h2 className='lg:text-3xl text-xl mt-8 mb-2'>{item.title}</h2>

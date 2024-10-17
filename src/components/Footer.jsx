@@ -4,7 +4,7 @@ export default function Footer() {
       {/* text-[#ffffff90] */}
       <div className="absolute right-0 bottom-0 shadow-[0_0_300px_10px_rgba(255,255,255)] bg-transparent"></div>
 
-      <h1 className="text-5xl sm:text-6xl font-suse">Wanna talk?</h1>
+      <h1 className="text-4xl sm:text-5xl font-suse">Wanna talk?</h1>
       <p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ export default function Footer() {
           />
         </svg>
         <button 
-        className="text-base sm:text-lg opacity-80 hover:underline">
+        className="text-sm sm:text-lg opacity-80 hover:underline">
           <a
             href="mailto:youremail@gmail.com"
           >
@@ -66,11 +66,11 @@ export default function Footer() {
 
         <div>
           <a
-            href="http://localhost:3000/Dwi_Bagaskara-CV.pdf"
+            href={`/Dwi_Bagaskara-CV.pdf`}
             className=" text-base bg-gradient-to-tr from-purple-500 to-blue-500 py-2 px-6 transition-transform transform 
             hover:-skew-x-[10deg] hover:rounded-none skew-x-0 rounded inline-block"
           >
-            Resume
+            Curriculum Vitae
           </a>
         </div>
       </div>

@@ -55,7 +55,7 @@ export default function Hero() {
           PORTFOLIOPORTFOLIO
         </span>
 
-        <div className="mb-1 relative sm:px-12 px-4 flex justify-between items-end max-sm:gap-1">
+        <div className="mb-1 relative sm:px-12 px-4 flex justify-between items-end gap-2">
           <h1 className="z-10 relative text-primary font-bold italic">
             DWI BAGASKARA
           </h1>
@@ -68,7 +68,7 @@ export default function Hero() {
         <div className="hero-img z-10  w-full h-1/3 max-h-[280px] bg-white" />
 
         <span className="sm:px-12 px-4 font-bold italic">
-          PROGRAMMER <br />
+          FRONTEND DEVELOPER <br />
           BASED IN INDONESIA
         </span>
       </div>
