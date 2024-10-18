@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import EachUtils from "../../utils/EachUtils";
 
 export default function Skill() {
   const skill = [
@@ -60,10 +61,8 @@ export default function Skill() {
   }, []);
 
   return (
-    <div className="bg-black" id="about">
-      <div
-        className="relative bg-white text-black rounded-t-3xl lg:px-16 px-6 py-24"
-      >
+    <div className="relative bg-black" id="about">
+      <div className="-translate-y-16 bg-white text-black rounded-t-3xl lg:px-16 px-6 pt-24 pb-14">
         <div className="flex md:flex-row flex-col">
           <div className="flex-1 flex flex-col justify-center gap-5">
             <h1 className="italic text-4xl mb-5 after:absolute relative after:w-1/2 after:h-2 after:bg-gradient-to-r after:from-secondary after:to-white after:left-0 after:bottom-0 after:translate-y-2">
@@ -79,18 +78,20 @@ export default function Skill() {
             </p>
             <div className="flex gap-20">
               <ul>
-                {skill.slice(0, 6).map((item) => (
-                  <li key={item}>
-                    <span className="text-primary">{"<>"}</span> {item}
-                  </li>
-                ))}
+                {
+                  <EachUtils
+                    of={skill.slice(0, 6)}
+                    render={(item) => ListSkill(item)}
+                  />
+                }
               </ul>
               <ul>
-                {skill.slice(6).map((item) => (
-                  <li key={item}>
-                    <span className="text-primary">{"<>"}</span> {item}
-                  </li>
-                ))}
+                {
+                  <EachUtils
+                    of={skill.slice(6)}
+                    render={(item) => ListSkill(item)}
+                  />
+                }
               </ul>
             </div>
           </div>
@@ -124,24 +125,45 @@ export default function Skill() {
             </div>
 
             {/* <img src={me} alt="" className='md:h-[500px] h-[380px] md:w-10/12 w-full float-right object-cover rounded-3xl' /> */}
-            <div className=" z-10 absolute whitespace-nowrap md:bottom-10 bottom-0 md:left-0 left-1/2 md:translate-x-0 -translate-x-1/2 md:translate-y-0 translate-y-1/2">
-              <div className="md:flex inline-flex bg-primary text-white shadow-md items-center justify-center py-2 px-5 rounded-lg md:mb-4 mb-0 mr-4">
-                <span className="text-2xl font-semibold mr-3">
-                  {new Date().getFullYear() - 2006}
-                </span>
-                Years <br /> Old
-              </div>
-
-              <div className="md:flex inline-flex bg-primary text-white shadow-md items-center justify-center py-2 px-5 rounded-lg">
-                <span className="text-2xl font-semibold mr-3">
-                  {new Date().getFullYear() - 2022}+
-                </span>
-                Years <br /> Experience
-              </div>
+            <div className="z-10 absolute whitespace-nowrap md:bottom-10 bottom-0 md:left-0 left-1/2 md:translate-x-0 -translate-x-1/2 md:translate-y-0 translate-y-1/2">
+              <BarInfo
+                title={"Years Old"}
+                desc={new Date().getFullYear() - 2006}
+              />
+              <BarInfo
+                title={"Years Experience"}
+                desc={new Date().getFullYear() - 2022 + "+"}
+              />
             </div>
           </div>
         </div>
       </div>
+
+      <div className="w-full h-16 absolute bottom-0 bg-white" />
     </div>
   );
 }
+
+const ListSkill = (item) => {
+  return (
+    <li>
+      <span className="text-primary">{"<>"}</span> {item}
+    </li>
+  );
+};
+
+const BarInfo = ({ title, desc }) => {
+  return (
+    <div className="inline-flex md:flex text-wrap bg-primary text-white shadow-md items-center py-2 px-5 m-2 rounded-lg ">
+      <span className="text-2xl font-semibold mr-2">{desc}</span>
+      <EachUtils
+        of={title.split(" ")}
+        render={(item) => (
+          <>
+            {item} <br />
+          </>
+        )}
+      />
+    </div>
+  );
+};

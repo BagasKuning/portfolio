@@ -7,55 +7,42 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const container = useRef(null);
+  const heroImage = useRef(null)
 
   useGSAP(
     () => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#hero-section",
+          trigger: container.current,
+          // markers: true,
           start: "top",
-          end: "10px",
+          end: "250px",
           scrub: 1,
-          pin: "#hero-section",
+          pin: true,
         },
       });
 
       tl.to(".hero-img", {
-          height: 0, // Mengubah tinggi ".hero-img" menjadi 0
-          ease: "none", // Tanpa easing untuk efek yang lebih mulus
-          duration: 10
-        })
-        .to(".hero-desc", {
-        opacity: 0
-      })
-        
+        height: 0,
+        // ease: "power2.out",
+        duration: 10,
+      }).to(".hero-desc", {
+        opacity: 0,
+        // ease: "power2.out",
+      });
     },
-    { scope: container }
-  ); // <-- scope is for selector text (optional)
+    { scope: container.current }
+  );
 
   return (
-    <div
-      className="relative font-suse md:text-6xl sm:text-5xl text-3xl w-full h-screen bg-black"
-    >
-      <div 
-        id="hero-section" 
-        ref={container}
-        className="fixed top-0 left-1/2 -translate-x-1/2 max-w-[1600px] w-full h-screen flex flex-col justify-center"
+    <div ref={container} className="relative w-full h-screen bg-black">
+      <div
+        className="font-suse md:text-6xl sm:text-5xl text-3xl top-0 max-w-[1600px] w-full h-screen flex flex-col"
       >
-        <span
-          className="absolute hero-text-stroke z-0 max-w-[1600px] select-none opacity-[5%] sm:text-[10vw] text-[10vw] top-[15%] 
-                    text-black overflow-hidden"
-        >
-          PORTFOLIOPORTFOLIO
-        </span>
-        <span
-          className="absolute hero-text-stroke z-0 max-w-[1600px] select-none opacity-[5%] sm:text-[10vw] text-[10vw] top-[20%] 
-                    text-black overflow-hidden"
-        >
-          PORTFOLIOPORTFOLIO
-        </span>
+        <TextStroke text="PORTFOLIOPORTFOLIO" topPercentValue={15} />
+        <TextStroke text="PORTFOLIOPORTFOLIO" topPercentValue={20} />
 
-        <div className="mb-1 relative sm:px-12 px-4 flex justify-between items-end gap-2">
+        <div className="h-1/3 mb-1 sm:px-12 px-4 flex justify-between items-end gap-2">
           <h1 className="z-10 relative text-primary font-bold italic">
             DWI BAGASKARA
           </h1>
@@ -65,9 +52,9 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="hero-img z-10  w-full h-1/3 max-h-[280px] bg-white" />
+        <div ref={heroImage} className="hero-img z-10 w-full h-1/3 max-h-[280px] 2xl:max-h-[360px] bg-white" />
 
-        <span className="sm:px-12 px-4 font-bold italic">
+        <span className="h-1/3 sm:px-12 px-4 font-bold italic">
           FRONTEND DEVELOPER <br />
           BASED IN INDONESIA
         </span>
@@ -75,3 +62,15 @@ export default function Hero() {
     </div>
   );
 }
+
+const TextStroke = ({ text, topPercentValue }) => {
+  return (
+    <span
+      style={{ top: `${topPercentValue}%` }}
+      className={`absolute hero-text-stroke z-0 d w-full select-none opacity-[5%] text-[10vw]
+                    text-black overflow-hidden`}
+    >
+      {text}
+    </span>
+  );
+};
