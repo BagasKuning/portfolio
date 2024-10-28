@@ -62,7 +62,7 @@ export default function Skill() {
 
   return (
     <div className="relative bg-black" id="about">
-      <div className="-translate-y-16 bg-white text-black rounded-t-3xl lg:px-16 px-6 pt-24 pb-14">
+      <div className="bg-white text-black rounded-t-3xl lg:px-16 px-6 py-24">
         <div className="flex md:flex-row flex-col">
           <div className="flex-1 flex flex-col justify-center gap-5">
             <h1 className="italic text-4xl mb-5 after:absolute relative after:w-1/2 after:h-2 after:bg-gradient-to-r after:from-secondary after:to-white after:left-0 after:bottom-0 after:translate-y-2">

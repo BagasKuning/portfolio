@@ -17,18 +17,17 @@ export default function Hero() {
           // markers: true,
           start: "top",
           end: "250px",
-          scrub: 1,
-          pin: true,
+          scrub: .8,
+          // pin: true,
         },
       });
 
       tl.to(".hero-img", {
         height: 0,
-        // ease: "power2.out",
-        duration: 10,
+        // ease: "circ.out",
       }).to(".hero-desc", {
         opacity: 0,
-        // ease: "power2.out",
+        // ease: "circ.out",
       });
     },
     { scope: container.current }
@@ -37,7 +36,7 @@ export default function Hero() {
   return (
     <div ref={container} className="relative w-full h-screen bg-black">
       <div
-        className="font-suse md:text-6xl sm:text-5xl text-3xl top-0 max-w-[1600px] w-full h-screen flex flex-col"
+        className="fixed font-suse md:text-6xl sm:text-5xl text-3xl top-0 max-w-[1600px] w-full h-full flex flex-col"
       >
         <TextStroke text="PORTFOLIOPORTFOLIO" topPercentValue={15} />
         <TextStroke text="PORTFOLIOPORTFOLIO" topPercentValue={20} />
