@@ -11,7 +11,9 @@ export default function Navbar() {
           Project
         </a>
         <a
-          href="http://localhost:3000/Dwi_Bagaskara-CV.pdf"
+          href="/Dwi_Bagaskara-CV.pdf"
+          target="_blank"
+          rel="noreferrer"
           className="ml-3 bg-gradient-to-tr from-primary to-blue-300 px-3 rounded py-1"
         >
           Resume

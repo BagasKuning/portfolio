@@ -1,75 +1,34 @@
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import portrait from "../../img/me2.jpg";
 
 export default function Hero() {
-  const container = useRef(null);
-  const heroImage = useRef(null)
-
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container.current,
-          // markers: true,
-          start: "top",
-          end: "250px",
-          scrub: .8,
-          // pin: true,
-        },
-      });
-
-      tl.to(".hero-img", {
-        height: 0,
-        // ease: "circ.out",
-      }).to(".hero-desc", {
-        opacity: 0,
-        // ease: "circ.out",
-      });
-    },
-    { scope: container.current }
-  );
-
   return (
-    <div ref={container} className="relative w-full h-screen bg-black">
-      <div
-        className="fixed font-suse md:text-6xl sm:text-5xl text-3xl top-0 max-w-[1600px] w-full h-full flex flex-col"
-      >
-        <TextStroke text="PORTFOLIOPORTFOLIO" topPercentValue={15} />
-        <TextStroke text="PORTFOLIOPORTFOLIO" topPercentValue={20} />
+    <header className="hero" id="top">
+      <div className="site-nav">
+        <a className="wordmark" href="#top" aria-label="Dwi Bagaskara, home">DB<span>®</span></a>
+        <nav aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a className="nav-resume" href="/Dwi_Bagaskara-CV.pdf" target="_blank" rel="noreferrer">Resume <span>↗</span></a>
+        </nav>
+      </div>
 
-        <div className="h-1/3 mb-1 sm:px-12 px-4 flex justify-between items-end gap-2">
-          <h1 className="z-10 relative text-primary font-bold italic">
-            DWI BAGASKARA
-          </h1>
-          <p className="hero-desc sm:w-1/5 w-1/3 2xl:text-base text-xs max-sm:text-[9px]">
-            Creating a stunning digital world, where every click and swipe
-            becomes a new adventure for users
-          </p>
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <p className="eyebrow"><span className="status-dot" /> Product-minded full-stack developer <span className="eyebrow-location">— Medan, Indonesia</span></p>
+          <h1>I build software<br />for <em>real work.</em></h1>
+          <div className="hero-bottom">
+            <p className="hero-intro">I turn product needs into working features, from the interface to the database and the integrations in between.</p>
+            <a className="text-link" href="#work">Explore selected work <span>↓</span></a>
+          </div>
         </div>
 
-        <div ref={heroImage} className="hero-img z-10 w-full h-1/3 max-h-[280px] 2xl:max-h-[360px] bg-white" />
-
-        <span className="h-1/3 sm:px-12 px-4 font-bold italic">
-          FRONTEND DEVELOPER <br />
-          BASED IN INDONESIA
-        </span>
+        <figure className="portrait-frame">
+          <img src={portrait} alt="Portrait of Dwi Bagaskara" />
+          <figcaption><span>01 / 04</span><span>Independent by nature<br />Product focused by practice</span></figcaption>
+        </figure>
       </div>
-    </div>
+      <div className="hero-index"><span>Portfolio / 2026</span><span>Scroll to explore <b>↓</b></span></div>
+    </header>
   );
 }
-
-const TextStroke = ({ text, topPercentValue }) => {
-  return (
-    <span
-      style={{ top: `${topPercentValue}%` }}
-      className={`absolute hero-text-stroke z-0 d w-full select-none opacity-[5%] text-[10vw]
-                    text-black overflow-hidden`}
-    >
-      {text}
-    </span>
-  );
-};

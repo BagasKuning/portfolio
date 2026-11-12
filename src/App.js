@@ -4,17 +4,16 @@ import Hero from "./pages/Home/Hero";
 import Motto from "./pages/Home/Motto";
 import About from "./pages/Home/About";
 import Project from "./pages/Home/Project";
+import Experience from "./pages/Home/Experience";
 
 function App() {
   return (
-    <div className="App shadow-lg  max-w-[1600px] mx-auto">
-
-      {/* Home page */}
+    <div className="App">
       <Hero />
-      <About />
-      <Motto />
       <Project />
-
+      <About />
+      <Experience />
+      <Motto />
       <Footer />
     </div>
   );
