@@ -12,7 +12,7 @@ export default function Hero() {
           <a href="#experience">Experience</a>
           <a
             className="nav-resume"
-            href="/Dwi_Bagaskara-CV.pdf"
+            href="/cv_dwi-bagaskara.pdf"
             target="_blank"
             rel="noreferrer"
           >

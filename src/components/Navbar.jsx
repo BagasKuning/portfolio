@@ -11,7 +11,7 @@ export default function Navbar() {
           Project
         </a>
         <a
-          href="/Dwi_Bagaskara-CV.pdf"
+          href="/cv_dwi-bagaskara.pdf"
           target="_blank"
           rel="noreferrer"
           className="ml-3 bg-gradient-to-tr from-primary to-blue-300 px-3 rounded py-1"

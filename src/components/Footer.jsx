@@ -31,7 +31,7 @@ export default function Footer() {
           >
             GitHub ↗
           </a>
-          <a href="/Dwi_Bagaskara-CV.pdf" target="_blank" rel="noreferrer">
+          <a href="/cv_dwi-bagaskara.pdf" target="_blank" rel="noreferrer">
             Resume ↗
           </a>
         </div>
